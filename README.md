@@ -1,5 +1,7 @@
 # creative-3
 
+My third creative project for CS260, using Vue CLI
+
 ## Project setup
 ```
 npm install
