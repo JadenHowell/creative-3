@@ -2,7 +2,7 @@
 <div id="app">
   <div class="header">
     <div id="left">
-      <router-link to="/profile">Profile</router-link>
+      <router-link to="/profile"><strong>Profile</strong></router-link>
     </div>
     <div id="brand">
       <router-link to="/">
@@ -10,7 +10,7 @@
       </router-link>
     </div>
     <div id="right">
-      <router-link to="/dates">Your dates</router-link>
+      <router-link to="/dates"><strong>Your dates</strong></router-link>
     </div>
   </div>
   <div class="content">
@@ -29,8 +29,6 @@ body {
   margin: 50px 100px;
   font-family: 'Bellota Text', cursive;
 }
-
-#app {}
 
 a{
   text-decoration: none;
@@ -51,7 +49,8 @@ h1 {
 #left {
   grid-area: left;
   display: flex;
-  justify-content: flex-start;
+  text-align: center;
+  margin: 25px auto;
 }
 #brand {
   grid-area: brand;
@@ -61,11 +60,14 @@ h1 {
 }
 #brand img {
   height: 200px;  
+  display: block;
+  margin: 0 auto;
 }
 #right {
   grid-area: right;
   display: flex;
-  justify-content: flex-end;
+  text-align: center;
+  margin: 25px auto;
 }
 
 #icon{

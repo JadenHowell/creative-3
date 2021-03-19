@@ -3,10 +3,11 @@
     <div class="about">
       <h1>Welcome to Blind Matchmaker!</h1>
       <h2>
-        Here, looks are the furthest from our mind. 
+        Here, how one looks is the furthest thing from our mind. 
           See bottom of page for instructions about how to participate!
       </h2>
     </div>
+    
     <PersonList :people="this.$root.$data.people"/>
 
     <div class="how">
@@ -25,6 +26,8 @@
         a date, you will be able to see where the other person would like their date. If that's out
         of your way, feel free to cancel! Break some hearts! Be free!
       </p>
+      <h3>But first!</h3>
+      <p>You will need to set up your account. Head over to our profile page to get started!</p>
     </div>
   </div>
 </template>

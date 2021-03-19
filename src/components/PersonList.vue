@@ -6,7 +6,7 @@
         <h1>{{person.first_name}} {{person.last_name}}</h1>
         <h2>{{person.job}}</h2>
       
-        <button class="auto" @click="date(person)">Request Date</button>
+        <button v-bind:disabled="canClick(person)" class="auto" @click.prevent="date(person)">Request Date</button>
 
       </div>
     </div>
@@ -22,8 +22,21 @@ export default {
   },
   methods: {
     date(person){
-      console.log(person);
-      this.$root.$data.dates.push(person)
+      let exists = false;
+      for(let i = 0; i < this.$root.$data.dates.length; i++){
+        if(this.$root.$data.dates[i] == person){
+          exists = true;
+        }
+      }
+      if (!exists){
+        person["pending"] = Math.random() > .25;
+        console.log("added", person.pending);
+        this.$root.$data.dates.push(person)
+        person.scheduled = true;
+      }
+    },
+    canClick(person){
+      return person.scheduled || this.$root.$data.user.first_name=="UNKNOWN";
     }
   }
 }
@@ -74,6 +87,10 @@ button {
   color: white;
   border: none;
   margin: 1px;
+}
+
+button:disabled{
+  background: #808080;
 }
 
 </style>

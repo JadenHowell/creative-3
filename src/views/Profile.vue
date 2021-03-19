@@ -34,6 +34,14 @@
           </form>
         </div>
       </div>
+
+      <hr/>
+      <div class="why">
+        <h2>Why do we need to know?</h2>
+        <p>This is a dating site. If you want to date people, you gotta make yourself available
+          to be dated. We don't need to know much, but once you input this info, we will be able to
+          present you to others and get those mutual requests going!</p>
+      </div>
     </div>
 </template>
 
@@ -119,6 +127,10 @@ input{
 .subsection{
     margin-bottom: 20px;
     width: 500px;
+    text-align: center;
+}
+
+.why{
     text-align: center;
 }
 </style>
